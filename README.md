@@ -2,7 +2,8 @@
 
 **Assignment:** Scroll-Driven Hero Section Animation — Itzfizz Web Development Internship
 
-- **Live site:** https://venky656.github.io/itzfizz-scroll-hero/
+- **Live site (GitHub Pages):** https://venky656.github.io/itzfizz-scroll-hero/
+- **Live site (Vercel):** https://itzfizz-hero-nextjs.vercel.app
 - **Repository:** https://github.com/Venky656/itzfizz-scroll-hero
 
 ## Run
@@ -47,5 +48,6 @@ public/
 - Edit `STATS` and `WORDS` in `components/Hero.js`.
 
 ## Deploy
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which runs `npm run build`
-(static export to `/out`) and publishes to GitHub Pages.
+- **GitHub Pages:** pushing to `main` triggers `.github/workflows/deploy.yml`, which runs
+  `npm run build` (static export to `/out`) and publishes to Pages.
+- **Vercel:** `vercel deploy --prod` (static export, served from `/out`).
