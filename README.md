@@ -12,10 +12,11 @@ npm run dev     # http://localhost:3000
 ```
 
 ## How it works
-- **Intro (on load):** GSAP timeline staggers the headline letters in, then the four stat cards one by one, with a count-up.
+- **Intro (on load):** GSAP staggers the headline letters in (fade + slide, `power4.out`).
 - **Scroll (core):** ScrollTrigger pins the hero (`pin: true`) and scrubs (`scrub: 1`) so the car's position is tied to scroll progress and smoothed.
 - **Car:** `x` moves from 0 to `roadWidth - carWidth * 0.25`.
 - **Trail:** `scaleX` grows from the left, following the car.
+- **Stat cards:** hidden at load; each reveals at a scroll-progress threshold (0.18 / 0.36 / 0.54 / 0.72) with an eased y/scale/opacity transition, then its number counts up. Fully reversible on scroll-up.
 - **Headline:** letter centres are measured once (on `refreshInit`); letters light up when the car's front passes them.
 - **Extras:** headlight beam, speed HUD, and a slight tilt driven by scroll velocity.
 
@@ -27,3 +28,7 @@ npm run dev     # http://localhost:3000
 ## Customize
 - Replace `public/car.svg` with a top-down car image that faces right.
 - Edit `STATS` and `WORDS` in `components/Hero.js`.
+
+## Deploy
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which runs `npm run build`
+(static export to `/out`) and publishes to GitHub Pages.
