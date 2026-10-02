@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const WORDS = ["WELCOME", "ITZFIZZ"];
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 // Stats sourced from itzfizz.com — "10x Your Growth", "10 Years of Proven
 // Digital Marketing Excellence", "Across 200+ Projects".
 const STATS = [
@@ -180,7 +181,7 @@ export default function Hero() {
         {/* Car + headlight beam */}
         <div data-car className="absolute left-0 top-1/2 z-30 h-[62%] will-change-transform">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/car.svg" alt="" className="h-full w-auto drop-shadow-[0_12px_14px_rgba(0,0,0,.55)]" />
+          <img src={`${BASE}/car.svg`} alt="" className="h-full w-auto drop-shadow-[0_12px_14px_rgba(0,0,0,.55)]" />
           <div className="pointer-events-none absolute left-[92%] top-1/2 h-[70%] w-[24vw] -translate-y-1/2 bg-gradient-to-r from-yellow-100/30 to-transparent [clip-path:polygon(0_35%,100%_0,100%_100%,0_65%)]" />
         </div>
       </div>
