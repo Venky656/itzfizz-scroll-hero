@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { background: #e9e9ec; overflow-x: hidden; }
+body { margin: 0; color: #0b0b0c; }
+
+@media (prefers-reduced-motion: reduce) {
+  .nudge { animation: none !important; }
+}
+@keyframes nudge { 50% { transform: translateY(4px); } }
+.nudge { animation: nudge 1.4s ease-in-out infinite; }
