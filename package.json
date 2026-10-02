@@ -2,15 +2,27 @@
   "name": "itzfizz-scroll-hero",
   "version": "1.0.0",
   "private": true,
-  "scripts": { "dev": "next dev", "build": "next build", "start": "next start" },
+  "description": "Scroll-driven hero section animation (Itzfizz internship assignment) built with Next.js, Tailwind CSS and GSAP ScrollTrigger.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Venky656/itzfizz-scroll-hero.git"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
     "gsap": "^3.12.5",
-    "next": "14.2.15",
+    "next": "14.2.35",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.35",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14"
   }

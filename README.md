@@ -9,6 +9,23 @@
 ```bash
 npm install
 npm run dev     # http://localhost:3000
+npm run lint    # ESLint (next/core-web-vitals)
+npm run build   # static export to /out
+```
+
+## Structure
+```
+app/
+  layout.js        # fonts, metadata, favicon (icon.svg)
+  page.js          # hero + closing CTA
+  globals.css      # Tailwind base + reduced-motion fallback
+  icon.svg         # site icon
+components/
+  Hero.js          # all GSAP intro + scroll logic
+public/
+  car.svg          # top-down car facing right
+.github/workflows/
+  deploy.yml       # build + deploy to GitHub Pages on push
 ```
 
 ## How it works
