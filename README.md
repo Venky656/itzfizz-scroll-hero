@@ -1,5 +1,10 @@
 # ITZFIZZ Scroll-Driven Hero (Next.js + Tailwind + GSAP)
 
+**Assignment:** Scroll-Driven Hero Section Animation — Itzfizz Web Development Internship
+
+- **Live site:** https://venky656.github.io/itzfizz-scroll-hero/
+- **Repository:** https://github.com/Venky656/itzfizz-scroll-hero
+
 ## Run
 ```bash
 npm install
